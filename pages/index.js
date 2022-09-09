@@ -3,7 +3,6 @@ import Drinks from "../components/Drinks";
 //import Events from "../components/Events";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
-import GiftVoucher from "../components/GIftVoucher";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -91,9 +90,6 @@ export default function Home(
         {/* <section>
           <Events />
         </section> */}
-        <section>
-          <GiftVoucher />
-        </section>
         <section>
           <ContactForm />
         </section>
