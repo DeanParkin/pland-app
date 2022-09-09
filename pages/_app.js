@@ -57,7 +57,7 @@ function SiteLoader() {
     siteLoad && (
       <div className="loading-Wrapper">
         <div className="loading-icon">
-          <FontAwesomeIcon icon={faYinYang} className="text-primary" />
+          <FontAwesomeIcon icon={faYinYang} className="text-light" />
         </div>
       </div>
     )

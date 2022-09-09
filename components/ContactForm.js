@@ -38,8 +38,8 @@ export default function ContactForm() {
 
   return (
     <section className="container pt-3 mb-3">
-      <div className="text-center">
-        <h2 className="h2 text-primary baskerville-font">Contact Us</h2>
+      <div className="text-center text-light">
+        <h2 className="h2 baskerville-font">Contact Us</h2>
         <div className="d-flex justify-content-center">
           <p className="text-light text-container text-wrap">
             If you would like to ask a question or book a table, then get in

@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <>
       <footer className="mt-3">
-        <NewsLetter />
+        {/* <NewsLetter /> */}
         <div className="container footer-container text-light">
           <div className="row my-4 fs-5">
             <div className="col-md-4">
