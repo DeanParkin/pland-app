@@ -28,7 +28,7 @@ export default function Home(
         description="The Anchor, Digbeth is a place of comfort to enjoy real ale, ciders, craft beers, wine, spirits and even cocktails, modern drinking in a traditional boozer."
       />
       {/* <Carousel /> */}
-      <header className="text-dark text-center container pt-3">
+      <header className="text-light text-center container pt-3">
         <h2 className="fs-5 baskerville-font">
           Welcome To <br />
           <span className="h2 text-light">Plan;D</span>

@@ -19,11 +19,11 @@ export default function Nav({ children }) {
       : { class: "nav-link", aria: "", href: "/" };
 
   let about =
-    route == "drinks"
+    route == "about"
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
   let services =
-    route == "events"
+    route == "services"
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
   let contact =

@@ -4,7 +4,7 @@ export default function Drinks() {
   return (
     <>
       <div className="container text-light text-center pt-3 mb-4">
-        <h2 className="h2 text-primary baskerville-font">Drinks</h2>
+        <h2 className="h2 baskerville-font">Drinks</h2>
         <div className="d-flex justify-content-center">
           <p className="text-container">
             Real and craft ales, wines, spirits, and cocktails.
