@@ -31,17 +31,36 @@
 }
 
 button.btn {
-  background-color: $primary;
-  color: #000;
-  border-color: $primary;
-  &:hover {
-    background-color: #000;
-    color: $primary;
+  color: #fff;
+  background: linear-gradient(145deg, #007bbd, #00689f);
+  box-shadow: 5px 5px 9px #00669e, -5px -5px 9px #0080c4;
+  &:focus {
+    background: linear-gradient(145deg, #00689f, #007bbd);
+    box-shadow: 5px 5px 9px #00669e, -5px -5px 9px #0080c4;
   }
 }
 
 .text-container {
   max-width: 700px;
+}
+
+.neumorph-out {
+  background: linear-gradient(145deg, #007bbd, #00689f);
+  box-shadow: 5px 5px 9px #00669e, -5px -5px 9px #0080c4;
+}
+
+.neumorph-in {
+  background: linear-gradient(145deg, #00689f, #007bbd);
+  box-shadow: 5px 5px 9px #00669e, -5px -5px 9px #0080c4;
+}
+
+.form-neumorph-out {
+  box-shadow: 5px 5px 9px #00669e, -5px -5px 9px #0080c4;
+}
+
+.plan-shadow {
+  -webkit-box-shadow: 0px 6px 14px -3px rgba(0, 35, 53, 0.87);
+  box-shadow: 0px 6px 14px -3px rgba(0, 35, 53, 0.87);
 }
 
 //================================================
@@ -72,9 +91,9 @@ div div.input-group input.newsletter-submit.btn {
   font-size: 25px;
   //letter-spacing: 0.1em;
   font-weight: 700;
-  &:hover {
-    color: #000;
-  }
+  // &:hover {
+  //   color: #000;
+  // }
 }
 
 //================================================

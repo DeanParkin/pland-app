@@ -76,15 +76,12 @@ $font-size-root: 20px;
 
 //================================================
 //Color Variables
-//#b3d6d2;
-//#b8e6d8;
-//#71c3b4;
-//#a9dbd1
+//#0073b1;
 //
 //================================================
 
 // scss-docs-start theme-color-variables
-$primary: #b8e6d8;
+$primary: #0073b1;
 //$secondary: #000;
 // $success: $green !default;
 // $info: $cyan !default;
@@ -96,6 +93,8 @@ $dark: #000;
 // stylelint-enable value-keyword-case
 
 $border-width: 3px;
+
+$link-color: $light;
 
 //================================================
 //Cookie Pop-up Alert Override

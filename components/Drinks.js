@@ -12,7 +12,7 @@ export default function Drinks() {
             view our Drinks Menu
           </p>
         </div>
-        <a href="./ANCHOR_DRINKS_MENU.pdf">
+        <a href="#">
           <button className="btn drinks-menu btn-lg">Drinks Menu</button>
         </a>
       </div>

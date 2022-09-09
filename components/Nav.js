@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "../components/Footer";
-import logo from "../public/imgs/anchor-nav-logo-small.png";
+import logo from "../public/imgs/Pland-logo.jpg";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 // TODO - add the navbar links
@@ -18,24 +18,16 @@ export default function Nav({ children }) {
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
 
-  let drinks =
+  let about =
     route == "drinks"
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
-  let events =
+  let services =
     route == "events"
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
   let contact =
     route == "contact"
-      ? { class: "nav-link active", aria: "page", href: "/" }
-      : { class: "nav-link", aria: "", href: "/" };
-  let gallery =
-    route == "gallery"
-      ? { class: "nav-link active", aria: "page", href: "/" }
-      : { class: "nav-link", aria: "", href: "/" };
-  let giftvoucher =
-    route == "giftvoucher"
       ? { class: "nav-link active", aria: "page", href: "/" }
       : { class: "nav-link", aria: "", href: "/" };
 
@@ -78,8 +70,14 @@ export default function Nav({ children }) {
     //Add and remove cross class
     if (navOpen == true) {
       document.querySelector(".nav-icon").classList.remove("x");
+      document.querySelector(".navbar-toggler").classList.remove("neumorph-in");
+      document.querySelector(".navbar-toggler").classList.add("neumorph-out");
     } else {
       document.querySelector(".nav-icon").classList.add("x");
+      document.querySelector(".navbar-toggler").classList.add("neumorph-in");
+      document
+        .querySelector(".navbar-toggler")
+        .classList.remove("neumorph-out");
     }
   };
 
@@ -92,19 +90,19 @@ export default function Nav({ children }) {
 
   return (
     <>
-      <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+      <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-primary plan-shadow">
         <div className="container-fluid">
-          <div className="me-2" style={{ height: "60px" }}>
+          <div className="me-2" style={{ height: "50px" }}>
             <h1 className="m-0">
-              <span hidden={true}>The Anchor Digbeth, Birmingham</span>
+              <span hidden={true}>Plan;D, Birmingham Web Developer</span>
             </h1>
             <Link href="/">
-              <div style={{ width: "60px", height: "60px" }}>
+              <div style={{ height: "50px", width: "151px" }}>
                 <Image
                   src={logo}
-                  alt="The Anchor Digbeth"
-                  width={120}
-                  height={120}
+                  height={50}
+                  width={151}
+                  alt="Plan D"
                   className="navbar-brand"
                   priority={true}
                 />
@@ -113,7 +111,7 @@ export default function Nav({ children }) {
           </div>
           <button
             id="toggleBtn"
-            className="navbar-toggler"
+            className="navbar-toggler neumorph"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarToggler"
@@ -144,50 +142,26 @@ export default function Nav({ children }) {
                 className="nav-item me-2"
                 //data-bs-toggle="collapse"
               >
-                <Link href="/drinks">
+                <Link href="/about">
                   <a
-                    className={drinks.class}
+                    className={about.class}
                     onClick={linkClick}
                     //aria-current={home.aria}
                     //aria-current="page"
                   >
-                    Drinks
+                    about
                   </a>
                 </Link>
               </li>
               <li className="nav-item me-2">
-                <Link href="/gallery">
+                <Link href="/services">
                   <a
-                    className={gallery.class}
+                    className={services.class}
                     onClick={linkClick}
                     //aria-current={home.aria}
                     //aria-current="page"
                   >
-                    Gallery
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item me-2">
-                <Link href="/events">
-                  <a
-                    className={events.class}
-                    onClick={linkClick}
-                    //aria-current={home.aria}
-                    //aria-current="page"
-                  >
-                    Events
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item me-2">
-                <Link href="/giftvoucher">
-                  <a
-                    className={giftvoucher.class}
-                    onClick={linkClick}
-                    //aria-current={home.aria}
-                    //aria-current="page"
-                  >
-                    gift voucher
+                    services
                   </a>
                 </Link>
               </li>

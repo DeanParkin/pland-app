@@ -1,22 +1,26 @@
-import Carousel from "../components/Carousel";
+//import Carousel from "../components/Carousel";
 import Drinks from "../components/Drinks";
-import Events from "../components/Events";
+//import Events from "../components/Events";
 import ContactForm from "../components/ContactForm";
 import SEO from "../components/SEO";
 import GiftVoucher from "../components/GIftVoucher";
 import { useState } from "react";
 import Image from "next/image";
 
-export default function Home({ feed }) {
-  let [numOfImages, setNumOfImages] = useState(6);
+export default function Home(
+  {
+    /**feed**/
+  }
+) {
+  // let [numOfImages, setNumOfImages] = useState(6);
 
-  const loadClick = () => {
-    setNumOfImages(numOfImages + 6);
-  };
+  // const loadClick = () => {
+  //   setNumOfImages(numOfImages + 6);
+  // };
 
-  const arr = feed.data.filter((item) => item.media_type === "IMAGE");
-  //console.log(arr);
-  const images = arr.splice(0, numOfImages);
+  // const arr = feed.data.filter((item) => item.media_type === "IMAGE");
+  // //console.log(arr);
+  // const images = arr.splice(0, numOfImages);
 
   return (
     <div>
@@ -24,23 +28,22 @@ export default function Home({ feed }) {
         title="Home"
         description="The Anchor, Digbeth is a place of comfort to enjoy real ale, ciders, craft beers, wine, spirits and even cocktails, modern drinking in a traditional boozer."
       />
-      <Carousel />
-      <header className="text-light text-center container pt-3">
+      {/* <Carousel /> */}
+      <header className="text-dark text-center container pt-3">
         <h2 className="fs-5 baskerville-font">
           Welcome To <br />
-          <span className="h2 text-primary">The Anchor Digbeth</span>
+          <span className="h2 text-light">Plan;D</span>
         </h2>
         <div className="d-flex justify-content-center">
           <p className="h2 text-primary baskerville-font"></p>
         </div>
         <div className="d-flex justify-content-center">
           <p className="my-2 text-container">
-            The Anchor, as it is now known &#40;we dropped the
-            &#8216;Inn&#8217;&#41; is still a free house so we are free to
-            present you with the best and more interesting products available.
-            We don&apos;t intend to re-invent the wheel, our aim is simply to
-            provide a friendly space for everyone to enjoy great beer, wine,
-            coffee, cocktails and spirits with great service. Simple.
+            Plan;D is a web development agency focused on providing quality SEO
+            first web applications, that are mobile friendly, accessible and
+            fast. Plan;D utilizes the power of technologies such as React and
+            Bootstrap 5.2, to provide a fast, accessibly friendly web experience
+            for you and your clients.
           </p>
         </div>
       </header>
@@ -48,7 +51,7 @@ export default function Home({ feed }) {
         <section>
           <Drinks />
         </section>
-        <section>
+        {/* <section>
           <div className="container text-center pt-3">
             <h2 className="h2 text-primary baskerville-font">Gallery</h2>
           </div>
@@ -84,10 +87,10 @@ export default function Home({ feed }) {
               <button className="btn btn-primary">go to instagram</button>
             </a>
           </div>
-        </section>
-        <section>
+        </section> */}
+        {/* <section>
           <Events />
-        </section>
+        </section> */}
         <section>
           <GiftVoucher />
         </section>
@@ -99,15 +102,15 @@ export default function Home({ feed }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const apiUrl = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(apiUrl);
-  const feed = await data.json();
+// export const getStaticProps = async () => {
+//   const apiUrl = `https://graph.instagram.com/me/media?fields=id,username,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+//   const data = await fetch(apiUrl);
+//   const feed = await data.json();
 
-  return {
-    props: {
-      feed,
-    },
-    revalidate: 3600,
-  };
-};
+//   return {
+//     props: {
+//       feed,
+//     },
+//     revalidate: 3600,
+//   };
+// };
