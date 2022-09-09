@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 //import { useRouter } from "next/router";
 import Nav from "../components/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDharmachakra } from "@fortawesome/free-solid-svg-icons";
+import { faDharmachakra, faYinYang } from "@fortawesome/free-solid-svg-icons";
 
 import CookieConsent from "react-cookie-consent";
 import "../styles/main.scss";
@@ -57,7 +57,7 @@ function SiteLoader() {
     siteLoad && (
       <div className="loading-Wrapper">
         <div className="loading-icon">
-          <FontAwesomeIcon icon={faDharmachakra} className="text-primary" />
+          <FontAwesomeIcon icon={faYinYang} className="text-primary" />
         </div>
       </div>
     )
