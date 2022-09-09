@@ -111,7 +111,7 @@ export default function Nav({ children }) {
           </div>
           <button
             id="toggleBtn"
-            className="navbar-toggler neumorph"
+            className="navbar-toggler neumorph-out"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarToggler"
